@@ -29,6 +29,8 @@
   },
   "license": "ISC",
   "devDependencies": {
+    "classnames": "^2.2.5",
+    "cookiesjs": "^1.4.2",
     "edge-builder": "^0.12.15",
     "edge-core": "^0.6.28",
     "edge-postcss": "^0.9.1",

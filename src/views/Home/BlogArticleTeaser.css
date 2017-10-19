@@ -1,0 +1,59 @@
+.article {
+  display: flex;
+  margin-bottom: 4rem;
+}
+
+.meta {
+  width: 13rem;
+  flex-shrink: 0;
+
+  color: #4a2233;
+}
+
+.meta a {
+  color: #872054;
+  font-family: SSoft Glober OpenType;
+
+  font-size: 0.88rem;
+  line-height: 1.34;
+}
+
+.content header a {
+  color: #872054;
+
+  font-family: SSoft Elena OpenType;
+  font-size: 2.024rem;
+  line-height: 1.26;
+}
+
+.content p {
+  margin-bottom: 1.73rem;
+
+  font-family: SSoft Glober OpenType;
+  font-size: 1.125rem;
+  line-height: 1.54;
+
+  color: #4a2233;
+}
+
+.content footer a {
+  display: inline-block;
+  padding: 0.5em 1em;
+
+  font-family: SSoft Glober OpenType;
+  font-size: 1.439rem;
+  line-height: 1.45;
+  border-radius: 0.25rem;
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.8),
+      rgba(255, 255, 255, 0.7)
+    );
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+  color: #4a2233;
+  text-decoration: none;
+  transition: background 200ms, box-shadow 200ms;
+  cursor: default;
+  white-space: nowrap;
+}

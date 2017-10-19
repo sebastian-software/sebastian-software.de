@@ -1,0 +1,10 @@
+bin
+build
+node_modules
+coverage
+lib
+docs
+
+.env
+.cache
+.vscode

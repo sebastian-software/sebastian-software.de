@@ -1,0 +1,51 @@
+.product {
+  width: 33%;
+  flex: none;
+  display: flex;
+  flex-direction: column;
+
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+
+  margin-bottom: 1rem;
+
+  color: #fdf1f3;
+}
+
+.header {
+  display: flex;
+  padding: 1rem;
+
+  background-color: #682444;
+}
+
+.content {
+  flex: 1;
+  padding: 1rem;
+
+  font-size: 1.125rem;
+  line-height: 1.3;
+  border-top: 1px solid #f9dae3;
+  background-color: #4a2233;
+
+  font-family: SSoft Glober OpenType;
+}
+
+.icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0.5rem;
+
+  margin-right: 0.5rem;
+
+  border: 1px solid #4a2233;
+  border-radius: 0.5rem;
+  background-color: #fdf1f3;
+}
+
+.title {
+  font-family: SSoft Elena OpenType;
+  font-size: 1.583rem;
+  line-height: 1.58;
+  font-weight: 400;
+}

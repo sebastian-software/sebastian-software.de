@@ -1,0 +1,312 @@
+@import "./Variables.css";
+@import "./fonts/source-sans-pro/SourceSansPro.css";
+
+/* stylelint-disable */
+
+/*
+  apply a natural box layout model to all elements, but allowing
+  components to change
+*/
+
+* {
+  -webkit-font-smoothing: antialiased;
+}
+
+html {
+  font-family: Source Sans Pro, sans-serif;
+}
+
+body {
+  background: $background-color;
+}
+
+.root::after {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+
+  background: rgba($gray-dark, 0.5);
+  transition: opacity ease-out 200ms, transform linear 0ms 200ms;
+  will-change: transform, opacity;
+}
+
+.alive {
+  &::after {
+    opacity: 0;
+    transform: scale(0);
+  }
+}
+
+.content {
+  min-height: 20rem;
+}
+
+
+
+
+/*
+// Input Font
+*/
+
+@font-face {
+  font-family: SSoft Input OpenType;
+  font-weight: normal;
+  font-style: normal;
+
+  src:
+    url("./assets/fonts/web/InputMono-CondensedLight-subset.woff2") format("woff2"),
+    url("./assets/fonts/web/InputMono-CondensedLight-subset.woff") format("woff"),
+    url("./assets/fonts/web/InputMono-CondensedLight-subset.otf") format("opentype"),
+    url("./assets/fonts/web/InputMono-CondensedLight-subset-hinted.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: SSoft Input OpenType;
+  font-weight: normal;
+  font-style: italic;
+
+  src:
+    url("./assets/fonts/web/InputMono-CondensedLightItalic-subset.woff2") format("woff2"),
+    url("./assets/fonts/web/InputMono-CondensedLightItalic-subset.woff") format("woff"),
+    url("./assets/fonts/web/InputMono-CondensedLightItalic-subset.otf") format("opentype"),
+    url("./assets/fonts/web/InputMono-CondensedLightItalic-subset-hinted.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: SSoft Input OpenType;
+  font-weight: bold;
+  font-style: normal;
+
+  src:
+    url("./assets/fonts/web/InputMono-CondensedMedium-subset.woff2") format("woff2"),
+    url("./assets/fonts/web/InputMono-CondensedMedium-subset.woff") format("woff"),
+    url("./assets/fonts/web/InputMono-CondensedMedium-subset.otf") format("opentype"),
+    url("./assets/fonts/web/InputMono-CondensedMedium-subset-hinted.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: SSoft Input OpenType;
+  font-weight: bold;
+  font-style: italic;
+
+  src:
+    url("./assets/fonts/web/InputMono-CondensedMediumItalic-subset.woff2") format("woff2"),
+    url("./assets/fonts/web/InputMono-CondensedMediumItalic-subset.woff") format("woff"),
+    url("./assets/fonts/web/InputMono-CondensedMediumItalic-subset.otf") format("opentype"),
+    url("./assets/fonts/web/InputMono-CondensedMediumItalic-subset-hinted.ttf") format("truetype");
+}
+
+
+/*
+// Elena Font
+*/
+
+@font-face {
+  font-family: SSoft Elena OpenType;
+  font-weight: normal;
+  font-style: normal;
+
+  src:
+    url("./assets/fonts/web/Elena-Regular-subset.woff2") format("woff2"),
+    url("./assets/fonts/web/Elena-Regular-subset.woff") format("woff"),
+    url("./assets/fonts/web/Elena-Regular-subset.otf") format("opentype"),
+    url("./assets/fonts/web/Elena-Regular-subset-hinted.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: SSoft Elena OpenType;
+  font-weight: normal;
+  font-style: italic;
+
+  src:
+    url("./assets/fonts/web/Elena-RegularItalic-subset.woff2") format("woff2"),
+    url("./assets/fonts/web/Elena-RegularItalic-subset.woff") format("woff"),
+    url("./assets/fonts/web/Elena-RegularItalic-subset.otf") format("opentype"),
+    url("./assets/fonts/web/Elena-RegularItalic-subset-hinted.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: SSoft Elena OpenType;
+  font-weight: bold;
+  font-style: normal;
+
+  src:
+    url("./assets/fonts/web/Elena-Bold-subset.woff2") format("woff2"),
+    url("./assets/fonts/web/Elena-Bold-subset.woff") format("woff"),
+    url("./assets/fonts/web/Elena-Bold-subset.otf") format("opentype"),
+    url("./assets/fonts/web/Elena-Bold-subset-hinted.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: SSoft Elena OpenType;
+  font-weight: bold;
+  font-style: italic;
+
+  src:
+    url("./assets/fonts/web/Elena-BoldItalic-subset.woff2") format("woff2"),
+    url("./assets/fonts/web/Elena-BoldItalic-subset.woff") format("woff"),
+    url("./assets/fonts/web/Elena-BoldItalic-subset.otf") format("opentype"),
+    url("./assets/fonts/web/Elena-BoldItalic-subset-hinted.ttf") format("truetype");
+}
+
+/*
+// Glober Font
+// - 100 = Thin
+// - 200 = Light
+// - 300 = Book
+// - 400 = Regular
+// - 500 = SemiBold
+// - 600 = Bold
+// - 700 = ExtraBold (not included)
+// - 800 = Heavy (not included)
+// - 900 = Black (not included)
+*/
+
+@font-face {
+  font-family: SSoft Glober OpenType;
+  font-weight: 100;
+  font-style: normal;
+
+  src:
+    url("./assets/fonts/web/Glober-Thin-subset.woff2") format("woff2"),
+    url("./assets/fonts/web/Glober-Thin-subset.woff") format("woff"),
+    url("./assets/fonts/web/Glober-Thin-subset.otf") format("opentype"),
+    url("./assets/fonts/web/Glober-Thin-subset-hinted.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: SSoft Glober OpenType;
+  font-weight: 100;
+  font-style: italic;
+
+  src:
+    url("./assets/fonts/web/Glober-ThinItalic-subset.woff2") format("woff2"),
+    url("./assets/fonts/web/Glober-ThinItalic-subset.woff") format("woff"),
+    url("./assets/fonts/web/Glober-ThinItalic-subset.otf") format("opentype"),
+    url("./assets/fonts/web/Glober-ThinItalic-subset-hinted.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: SSoft Glober OpenType;
+  font-weight: 200;
+  font-style: normal;
+
+  src:
+    url("./assets/fonts/web/Glober-Light-subset.woff2") format("woff2"),
+    url("./assets/fonts/web/Glober-Light-subset.woff") format("woff"),
+    url("./assets/fonts/web/Glober-Light-subset.otf") format("opentype"),
+    url("./assets/fonts/web/Glober-Light-subset-hinted.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: SSoft Glober OpenType;
+  font-weight: 200;
+  font-style: italic;
+
+  src:
+    url("./assets/fonts/web/Glober-LightItalic-subset.woff2") format("woff2"),
+    url("./assets/fonts/web/Glober-LightItalic-subset.woff") format("woff"),
+    url("./assets/fonts/web/Glober-LightItalic-subset.otf") format("opentype"),
+    url("./assets/fonts/web/Glober-LightItalic-subset-hinted.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: SSoft Glober OpenType;
+  font-weight: 300;
+  font-style: normal;
+
+  src:
+    url("./assets/fonts/web/Glober-Book-subset.woff2") format("woff2"),
+    url("./assets/fonts/web/Glober-Book-subset.woff") format("woff"),
+    url("./assets/fonts/web/Glober-Book-subset.otf") format("opentype"),
+    url("./assets/fonts/web/Glober-Book-subset-hinted.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: SSoft Glober OpenType;
+  font-weight: 300;
+  font-style: italic;
+
+  src:
+    url("./assets/fonts/web/Glober-BookItalic-subset.woff2") format("woff2"),
+    url("./assets/fonts/web/Glober-BookItalic-subset.woff") format("woff"),
+    url("./assets/fonts/web/Glober-BookItalic-subset.otf") format("opentype"),
+    url("./assets/fonts/web/Glober-BookItalic-subset-hinted.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: SSoft Glober OpenType;
+  font-weight: 400;
+  font-style: normal;
+
+  src:
+    url("./assets/fonts/web/Glober-Regular-subset.woff2") format("woff2"),
+    url("./assets/fonts/web/Glober-Regular-subset.woff") format("woff"),
+    url("./assets/fonts/web/Glober-Regular-subset.otf") format("opentype"),
+    url("./assets/fonts/web/Glober-Regular-subset-hinted.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: SSoft Glober OpenType;
+  font-weight: 400;
+  font-style: italic;
+
+  src:
+    url("./assets/fonts/web/Glober-RegularItalic-subset.woff2") format("woff2"),
+    url("./assets/fonts/web/Glober-RegularItalic-subset.woff") format("woff"),
+    url("./assets/fonts/web/Glober-RegularItalic-subset.otf") format("opentype"),
+    url("./assets/fonts/web/Glober-RegularItalic-subset-hinted.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: SSoft Glober OpenType;
+  font-weight: 500;
+  font-style: normal;
+
+  src:
+    url("./assets/fonts/web/Glober-SemiBold-subset.woff2") format("woff2"),
+    url("./assets/fonts/web/Glober-SemiBold-subset.woff") format("woff"),
+    url("./assets/fonts/web/Glober-SemiBold-subset.otf") format("opentype"),
+    url("./assets/fonts/web/Glober-SemiBold-subset-hinted.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: SSoft Glober OpenType;
+  font-weight: 500;
+  font-style: italic;
+
+  src:
+    url("./assets/fonts/web/Glober-SemiBoldItalic-subset.woff2") format("woff2"),
+    url("./assets/fonts/web/Glober-SemiBoldItalic-subset.woff") format("woff"),
+    url("./assets/fonts/web/Glober-SemiBoldItalic-subset.otf") format("opentype"),
+    url("./assets/fonts/web/Glober-SemiBoldItalic-subset-hinted.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: SSoft Glober OpenType;
+  font-weight: 600;
+  font-style: normal;
+
+  src:
+    url("./assets/fonts/web/Glober-Bold-subset.woff2") format("woff2"),
+    url("./assets/fonts/web/Glober-Bold-subset.woff") format("woff"),
+    url("./assets/fonts/web/Glober-Bold-subset.otf") format("opentype"),
+    url("./assets/fonts/web/Glober-Bold-subset-hinted.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: SSoft Glober OpenType;
+  font-weight: 600;
+  font-style: italic;
+
+  src:
+    url("./assets/fonts/web/Glober-BoldItalic-subset.woff2") format("woff2"),
+    url("./assets/fonts/web/Glober-BoldItalic-subset.woff") format("woff"),
+    url("./assets/fonts/web/Glober-BoldItalic-subset.otf") format("opentype"),
+    url("./assets/fonts/web/Glober-BoldItalic-subset-hinted.ttf") format("truetype");
+}

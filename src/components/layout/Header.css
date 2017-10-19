@@ -1,0 +1,67 @@
+.header {
+  padding-bottom: 3rem;
+
+  background-color: #4a2233;
+
+  a {
+    text-decoration: none;
+  }
+}
+
+.strap {
+  width: 20rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+
+  margin-left: auto;
+  margin-right: auto;
+  border-bottom-right-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+
+  background-color: #fff7ef;
+
+  box-shadow: 0 0.1rem 0.5rem rgba(0, 0, 0, 0.3);
+
+  background-image:
+    linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.05),
+      transparent
+    );
+}
+
+.logo {
+  width: 83px;
+  height: 8rem;
+  margin-left: auto;
+  margin-right: auto;
+
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url("https://sebastian-software.imgix.net/logo.png?dpr=2&fm=webp&sharp=10&fit=scale&h=128&w=83&q=50&");
+  transition: opacity 300ms;
+  opacity: 1;
+}
+
+.text {
+  margin-top: 0.5rem;
+
+  text-align: center;
+  white-space: nowrap;
+  color: #872054;
+
+  font-family: SSoft Elena OpenType;
+  font-weight: 400;
+  font-size: 2rem; /* not exact */
+  line-height: 1.45; /* not exact */
+}
+
+.smallText {
+  display: block;
+
+  font-family: SSoft Glober OpenType;
+  color: #682444;
+  line-height: 1.95; /* not exact */
+  font-size: 1rem; /* not exact */
+}

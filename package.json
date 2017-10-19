@@ -1,7 +1,7 @@
 {
   "name": "edge-boilerplate",
-  "description": "Edge Boilerplate is a template for modern web applications. Part of the Edge Platform.",
-  "version": "0.6.5",
+  "description": "Homepage of Sebastian Software GmbH",
+  "version": "0.0.1",
   "main": "server/index.js",
   "author": {
     "name": "Sebastian Software",
@@ -35,18 +35,15 @@
     "check-bundle": "bundle-buddy build/client/*.map",
     "release": "git push && release-it --github.release --npm.publish --non-interactive",
     "release:minor": "git push && release-it --github.release --npm.publish --non-interactive --increment minor",
-    "release:major": "git push && release-it --github.release --npm.publish --non-interactive --increment major",
-    "now-build": "npm run build",
-    "now-start": "bin/react"
+    "release:major": "git push && release-it --github.release --npm.publish --non-interactive --increment major"
   },
   "repository": {
     "type": "git",
     "url": "git@github.com:sebastian-software/edge-boilerplate.git"
   },
   "keywords": [
-    "front-end",
-    "boilerplate",
-    "webpack",
+    "homepage",
+    "consulting",
     "react"
   ],
   "license": "Apache-2.0",

@@ -8,5 +8,12 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "edge-builder": "^0.12.15",
+    "edge-core": "^0.6.28",
+    "edge-postcss": "^0.9.1",
+    "edge-style": "^0.2.2",
+    "readable-code": "^3.4.14"
+  }
 }

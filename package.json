@@ -2,7 +2,7 @@
   "name": "ssoft-next",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
     "prepack": "npm run lint && prepublish && npm run build && npm run styleguide:build && npm run storybook:build",
     "precommit": "lint-staged",
@@ -13,6 +13,9 @@
     "release": "git push && release-it --github.release --npm.publish --non-interactive",
     "release:minor": "git push && release-it --github.release --npm.publish --non-interactive --increment minor",
     "release:major": "git push && release-it --github.release --npm.publish --non-interactive --increment major"
+  },
+  "bin": {
+    "react": "bin/react"
   },
   "lint-staged": {
     "*.js": "eslint",
@@ -31,6 +34,7 @@
     "edge-postcss": "^0.9.1",
     "edge-style": "^0.2.2",
     "husky": "^0.14.3",
+    "prepublish": "^1.5.1",
     "readable-code": "^3.4.14"
   }
 }

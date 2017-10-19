@@ -14,6 +14,10 @@
     "release:minor": "git push && release-it --github.release --npm.publish --non-interactive --increment minor",
     "release:major": "git push && release-it --github.release --npm.publish --non-interactive --increment major"
   },
+  "lint-staged": {
+    "*.js": "eslint",
+    "*.css": "stylelint"
+  },
   "keywords": [],
   "author": {
     "name": "Sebastian Software GmbH",
@@ -26,6 +30,7 @@
     "edge-core": "^0.6.28",
     "edge-postcss": "^0.9.1",
     "edge-style": "^0.2.2",
+    "husky": "^0.14.3",
     "readable-code": "^3.4.14"
   }
 }

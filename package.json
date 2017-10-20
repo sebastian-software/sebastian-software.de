@@ -1,5 +1,5 @@
 {
-  "name": "edge-boilerplate",
+  "name": "sebastian-software",
   "description": "Homepage of Sebastian Software GmbH",
   "version": "0.0.1",
   "main": "server/index.js",
@@ -11,10 +11,7 @@
   "pre-commit": "lint-staged",
   "lint-staged": {
     "*.js": "eslint",
-    "*.mjs": "eslint",
-    "*.css": "stylelint",
-    "*.pcss": "stylelint",
-    "*.sss": "stylelint"
+    "*.css": "stylelint"
   },
   "bin": {
     "react": "bin/react"

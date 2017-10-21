@@ -6,6 +6,13 @@ import { generateBlogRoutes } from "./blog"
 
 export default {
   /**
+   *
+   */
+  getConfig() {
+    return null
+  },
+
+  /**
    * Return map of routes. Match redux actions to urls.
    */
   getRoutes() {
